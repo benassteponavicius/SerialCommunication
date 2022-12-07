@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4e32fb96-c1ba-0f9e-00eb-7569a1fd0fd3}</ProjectGuid>
+    <ProjectGuid>{f7575cc0-370b-228d-87da-788476f1f806}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -50,11 +50,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Buzzer.cs" />
-     <Compile Include="Assets\Communication.cs" />
-     <Compile Include="Assets\LightHandler.cs" />
-     <Compile Include="Assets\Movement.cs" />
-     <Compile Include="Assets\SignalHandler.cs" />
+     <Compile Include="Assets\Scripts\Account.cs" />
+     <Compile Include="Assets\Scripts\AccountManagement.cs" />
+     <Compile Include="Assets\Scripts\Buzzer.cs" />
+     <Compile Include="Assets\Scripts\Communication.cs" />
+     <Compile Include="Assets\Scripts\CommunicationCyber.cs" />
+     <Compile Include="Assets\Scripts\DataEncrypter.cs" />
+     <Compile Include="Assets\Scripts\DatabaseManager.cs" />
+     <Compile Include="Assets\Scripts\LightHandler.cs" />
+     <Compile Include="Assets\Scripts\LogOut.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\PanelManager.cs" />
+     <Compile Include="Assets\Scripts\PrintDB.cs" />
+     <Compile Include="Assets\Scripts\SendToDB.cs" />
+     <Compile Include="Assets\Scripts\SensorData.cs" />
+     <Compile Include="Assets\Scripts\SignalHandler.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -77,34 +87,34 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Unity/Serial2019/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -288,6 +298,12 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.40f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data">
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Assets/Plugins/Mono.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.Sqlite">
+ <HintPath>C:/Users/BenasSteponavičius/Documents/GitHub/SerialCommunication/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.40f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

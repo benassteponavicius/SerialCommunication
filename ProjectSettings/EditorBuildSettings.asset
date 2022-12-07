@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: b1227992665507f41a0407a51fd533dc
+  - enabled: 1
+    path: Assets/Scenes/CyberPhysical Project.unity
+    guid: 1f853a2585633474d93a5f1978b709e4
   m_configObjects: {}
